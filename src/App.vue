@@ -11,13 +11,7 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+  @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 </style>

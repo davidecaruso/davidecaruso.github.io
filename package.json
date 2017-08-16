@@ -15,6 +15,12 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "bourbon-libsass": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "particles.js": "^2.0.0",
+    "shell.js": "^1.0.5",
+    "typed.js": "^2.0.5",
     "vue": "^2.3.3",
     "vue-router": "^2.6.0"
   },

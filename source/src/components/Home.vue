@@ -1,8 +1,10 @@
 <template>
-  <div class='home'>
+  <b-container fluid class='home'>
     <particles></particles>
-    <div id="shell"></div>
-  </div>
+    <b-container class="text-center">
+      <div id="shell"></div>
+    </b-container>
+  </b-container>
 </template>
 
 <script>
@@ -14,7 +16,7 @@ export default {
   data () {
     return {}
   },
-  mounted: function () {
+  mounted () {
     let shell = new Shell('#shell', {
       user: 'guest',
       host: 'davidecaruso',
@@ -22,7 +24,7 @@ export default {
       theme: 'dark',
       typed: Typed,
       responsive: false,
-      commands: ['Welcome bro', 'I am Davide, a web developer and also a bug maker', 'Enjoy your trip :D']
+      commands: ['Welcome bro', 'I am Davide. I am a full stack web developer']
     })
     shell
   },
@@ -33,18 +35,15 @@ export default {
 </script>
 
 <style lang='scss'>
+  @import "../../node_modules/bourbon-libsass/dist/bourbon";
   body {
     height: 100vh;
-    overflow: hidden;
   }
   #shell {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 50vw;
-    height: 30vh;
+    margin: 15vh auto 0;
+    min-width: 50vw;
+    min-height: 50vh;
+    max-width: 100%;
+    max-height: 100%;
   }
 </style>

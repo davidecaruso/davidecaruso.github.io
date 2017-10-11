@@ -116,7 +116,18 @@
 <style lang='scss' scoped>
   @import "../../node_modules/bourbon-libsass/dist/bourbon";
   #particles {
-    max-height: 100vh;
-    background-image: linear-gradient(70deg, #1B0D76, #9A308A);
+    z-index: -1;
+    max-width: 100vw;
+    height: 100vh;
+    width: 100%;
+    @include position(absolute, 0 0 0 0);
+    
+    $deg: 70deg;
+    $blue: #1B0D76;
+    $violet: #9A308A;
+    background-image: linear-gradient($deg, $blue, $violet);
+    -webkit-background-image: linear-gradient($deg, $blue, $violet);
+    -moz-background-image: linear-gradient($deg, $blue, $violet);
+    -o-background-image: linear-gradient($deg, $blue, #9A308A);
   }
 </style>

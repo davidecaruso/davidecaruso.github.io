@@ -11,18 +11,14 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "bourbon-libsass": "^1.0.0",
-    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "particles.js": "^2.0.0",
-    "shell.js": "^1.0.5",
-    "typed.js": "^2.0.5",
-    "vue": "^2.3.3",
-    "vue-router": "^2.6.0"
+    "shell.js": "^2.0.5",
+    "typed.js": "^2.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -34,6 +30,8 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
+    "bootstrap-vue": "^1.0.0-beta.9",
+    "bourbon-libsass": "^1.0.0",
     "chai": "^3.5.0",
     "chalk": "^2.0.1",
     "chromedriver": "^2.27.2",
@@ -84,7 +82,10 @@
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.8",
+    "vue": "^2.3.3",
+    "vue-gh-pages": "^1.5.0",
     "vue-loader": "^12.1.0",
+    "vue-router": "^2.6.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^2.6.1",

@@ -1,35 +1,42 @@
 <template>
   <div class='home'>
-    <h1>{{ msg }}</h1>
-    <div class="container-fluid">
-      <particles message="test"></particles>
-      <shell :messages="['Cats', 'test']"></shell>
-    </div>
+    <particles></particles>
+    <div id="shell"></div>
   </div>
 </template>
 
 <script>
 import particles from './Particles.vue'
-import shell from './Shell.vue'
+import Shell from 'shell.js'
+import Typed from 'typed.js'
 export default {
   name: 'hello',
   data () {
-    return {
-      msg: 'This is the homepage'
-    }
+    return {}
   },
   mounted: function () {
-//    let $ = window.jQuery = require('jquery')
-//    $('body').css('background', 'blue')
+    let shell = new Shell('#shell', {
+      user: 'guest',
+      host: 'davidecaruso',
+      path: 'shell.js',
+      theme: 'dark',
+      typed: Typed,
+      responsive: false,
+      commands: ['Welcome bro', 'I am Davide, a web developer and also a bug maker', 'Enjoy your trip :D']
+    })
+    shell
   },
   components: {
-    particles: particles,
-    shell: shell
+    particles: particles
   }
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
   #shell {
     position: absolute;
     top: 0;

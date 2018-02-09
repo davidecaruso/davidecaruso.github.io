@@ -78,3 +78,11 @@ theme: cactus-dark
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+githubEmojis:
+  enable: true
+  className: github-emoji
+  unicode: false
+  styles:
+    display: inline
+  localEmojis:

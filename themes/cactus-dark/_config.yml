@@ -2,13 +2,13 @@ nav:
   home: /
   about: /about/
   articles: /archives/
-  projects: http://github.com/probberechts
+  projects: http://github.com/davidecaruso
 
-projects_url: http://github.com/probberechts
+projects_url: http://github.com/davidecaruso
 
 customize:
     gravatar:
-        email: 
+        email: davide.caruso93@gmail.com
     logo:
         enabled: true
         width: 50
@@ -27,10 +27,10 @@ customize:
         url: /images/apple-touch-icon.png
         gravator: false
     social_links:
-        github: http://github.com/probberechts/cactus-dark
-        twitter: /
-        facebook: /
-        linkedin: /
+        github: https://github.com/davidecaruso
+        linkedin: https://www.linkedin.com/in/davidecaruso93/
+        twitter: https://twitter.com/davidecaruso93
+        facebook: https://www.facebook.com/davide.caruso93
     show_all_posts: false
     post_count: 5
     highlight: rainbow
@@ -41,7 +41,7 @@ rss: false
 # Plugins
 plugins:
     disqus_shortname: # Disqus Comments Shortname
-    google_analytics: UA-86660611-1 # enter the tracking ID for your Google Analytics
+    google_analytics: # enter the tracking ID for your Google Analytics
 
 # Miscellaneous
 miscellaneous:

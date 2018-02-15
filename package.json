@@ -21,5 +21,8 @@
   "description": "Just another blog of a developer.",
   "repository": "git@github.com:davidecaruso/davidecaruso.github.io.git",
   "author": "Davide Caruso <davide.caruso93@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "hexo-deployer-git": "^0.3.1"
+  }
 }

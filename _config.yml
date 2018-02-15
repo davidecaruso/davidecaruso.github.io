@@ -77,7 +77,8 @@ theme: cactus-dark
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/davidecaruso/davidecaruso.github.io.git
 
 githubEmojis:
   enable: true

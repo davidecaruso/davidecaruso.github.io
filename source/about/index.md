@@ -6,7 +6,7 @@ date: 2018-02-09 10:40:20
 ## Who
 Hi! My name is (what?) Davide, a guy who likes programming.
 
-I mainly deal with web development, but actually I like to explore all technologies. Like nerd people I like video games (strange, right?), read books and watch TV series but moreover I love technology. I also like fitness, arts, music and to travel seeing the world. I have two cats, or better they have me (?). Oh, and I love sushi.
+I mainly deal with web development, but actually I like to explore all technologies. Like nerd people I like video games (strange, right?), read books and watch TV series but moreover I love IT. I also like fitness, arts, music and to travel seeing the world. I have two cats, or better they have me (?). Oh, and I love sushi.
 
 I'm always in search of personal and professional improvements, so I rely a lot in resilience. Because of it I really like an Albert Einstein's phrase:
 

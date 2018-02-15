@@ -2,20 +2,43 @@
 title: Hello World
 subtitle: Create a blog with Hexo
 tags:
-- misc
+- hexo
+- bio
+- static-site-generator
 ---
 
-Should my first post title be something different to "Hello World"? Obviously, not.
-If you don't, let's know [who I am](/about) and here you can read what is this blog.
+Could my first post's title ever be something different to "Hello World"? Obviously, not.
+First of all, if you don't yet, let's know [who I am](/about), and then you can read here what is this blog.
 
 ### The idea
-The main reason which guided me to squander bunch of bits writing this things is that my memory is very unreliable. I'm goingo to write here stuff that could be usefull in the future, because is a very practical thing or because is an ispiration idea. Many profitable thoughts were made every single day in mind of everyone, thoutghs which will probably lost or remembered with a lot of effort: one of the oldest things on Earth is writing and it also is one of the oldest need of the humanity, so WRITE.
+The main reason which guided me to squander bunch of bytes writing this things is that my memory is very unreliable. I'm going to write here stuff that could be usefull in the future, because could be a very practical thing or because could be an ispiration idea. 
 
-### How the idea becomes real
-It is made through [Hexo](https://hexo.io), a powerful static-site generator written in NodeJS. Obviously, the choice was difficult: I was uncertain among it and [Hugo](https://gohugo.io/), written in Go with a increasing trend and a large community support; I also found other two valid frameworks - both two are sexy - doing the same (almost) thing: [Nuxt](https://nuxtjs.org/) - whom father is VueJS - and [Gatsby](https://www.gatsbyjs.org/) - whome father is ReactJS.
+Many profitable thoughts are made every single day in mind of everyone, things which will probably lost or maybe remembered with a lot of effort: one of the oldest things in the world, and also one of the oldest need of humanity, is writing, so WRITE.
+
+### How it becomes real
+It is made through [Hexo](https://hexo.io), a powerful static-site generator written in NodeJS. Obviously, as each choice regarding which technology to use, the choice was been difficult: I was uncertain among it and [Hugo](https://gohugo.io/), written in Go with a increasing trend and a large community support; I also found other two valid frameworks - both two sexy - doing the same (almost) things: [Nuxt](https://nuxtjs.org/) - of which father is VueJS - and [Gatsby](https://www.gatsbyjs.org/) - of which father is ReactJS.
 
 So the question is: Why Hexo?
-- Is not coupled with an existing standalone framework.
+- Is not coupled with an existing standalone framework - as Gatsby with React.
 - Has a great integration with GitHub Pages.
-- Has the markdown support for post creation.
-- Is fast.
+- Has the markdown support for post creation but you can choose a lot of template engines.
+- Provide by itself a cache system.
+- Is fast, yes it is.
+
+### Features
+I use it since a ridiculous time, but I already like many features. First of all is themes: Hexo has hundreds of free [themes](https://hexo.io/themes/) you can use, but you can obviuously create your own. 
+
+In the other side has a great command-line integration, infact you can create drafts and articles, pages and layouts, publish article or deploy your blog and may other things by terminal.
+
+### How to install Hexo
+Install it is very easily:
+
+```bash
+yarn global add hexo-cli
+hexo init blog && cd blog
+yarn install
+hexo server
+```
+
+Now if you visit *http://localhost:4000/* you can see a running Hexo blog.
+If you want to know more things about Hexo visit its [documentation page](https://hexo.io/docs/).

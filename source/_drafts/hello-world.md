@@ -10,12 +10,12 @@ tags:
 Could my first post's title ever be something different to "Hello World"? Obviously, not.
 First of all, if you don't yet, let's know [who I am](/about), and then you can read here what is this blog.
 
-### The idea
+## The idea
 The main reason which guided me to squander bunch of bytes writing this things is that my memory is very unreliable. I'm going to write here stuff that could be usefull in the future, because could be a very practical thing or because could be an ispiration idea. 
 
 Many profitable thoughts are made every single day in mind of everyone, things which will probably lost or maybe remembered with a lot of effort: one of the oldest things in the world, and also one of the oldest need of humanity, is writing, so WRITE.
 
-### How it becomes real
+## How it becomes real
 It is made through [Hexo](https://hexo.io), a powerful static-site generator written in NodeJS. Obviously, as each choice regarding which technology to use, the choice was been difficult: I was uncertain among it and [Hugo](https://gohugo.io/), written in Go with a increasing trend and a large community support; I also found other two valid frameworks - both two sexy - doing the same (almost) things: [Nuxt](https://nuxtjs.org/) - of which father is VueJS - and [Gatsby](https://www.gatsbyjs.org/) - of which father is ReactJS.
 
 So the question is: Why Hexo?
@@ -25,12 +25,12 @@ So the question is: Why Hexo?
 - Provide by itself a cache system.
 - Is fast, yes it is.
 
-### Features
+## Features
 I use it since a ridiculous time, but I already like many features. First of all is themes: Hexo has hundreds of free [themes](https://hexo.io/themes/) you can use, but you can obviuously create your own. 
 
 In the other side has a great command-line integration, infact you can create drafts and articles, pages and layouts, publish article or deploy your blog and may other things by terminal.
 
-### How to install Hexo
+## How to install Hexo
 Install it is very easily:
 
 ```bash

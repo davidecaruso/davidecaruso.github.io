@@ -28,6 +28,7 @@ Hard skills:
 - MySQL / PostgreSQL / MongoDB / Redis
 - Drupal / Wordpress
 - Laravel
+- DDD
 - Composer / Packagist / npm / Yarn / Bower
 - Hexo / VueJS / React / CreateJS
 - Webpack / Grunt / Gulp

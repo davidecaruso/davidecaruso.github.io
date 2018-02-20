@@ -1,9 +1,11 @@
 ---
 title: Overloading in PHP
 tags:
-- oop
-- php
+  - oop
+  - php
+date: 2018-02-20 13:10:42
 ---
+
 
 ## Definition
 One of the most appreciable things of the <abbr title="Object Oriented Programming">OOP</abbr> is the *overloading*, a technique which provides the possibility to declare many methods - or properties as well - with different functionalities but with the same name. The only things in which they differ are the type and/or the number of the arguments passed to, and is thanks to them that you can choose which implementation to call.

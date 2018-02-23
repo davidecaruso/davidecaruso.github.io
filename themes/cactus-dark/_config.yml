@@ -40,8 +40,8 @@ rss: false
 
 # Plugins
 plugins:
-    disqus_shortname: # Disqus Comments Shortname
-    google_analytics: # enter the tracking ID for your Google Analytics
+    disqus_shortname: davidecaruso
+    google_analytics: UA-108263871-2
 
 # Miscellaneous
 miscellaneous:

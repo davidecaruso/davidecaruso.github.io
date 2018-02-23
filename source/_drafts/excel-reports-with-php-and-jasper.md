@@ -82,10 +82,8 @@ Into an existing or an empty project run `composer require davidecaruso/jasper-p
 <?php
 require_once '/vendor/autoload.php';
 
-use JasperPHP\JasperPHP;
-
 // Create a new instance of JasperPHP
-$jasper = new JasperPHP();
+$jasper = new JasperPHP\JasperPHP();
 
 // Compile jrxml file into jasper
 $jasper->compile('/path/to/report.jrxml')->execute();
@@ -106,14 +104,19 @@ $jasper->process(
 
 Yes, it worked, but the Excel file is orrible.
 
-### Make a better Jasper Report
-You can play with the properties of each elements on the report, infact the next step is to remove useless bands, modify the style of texts, add texts too and change report properties as we need.
+### Tips to make a better Jasper Report
+You can play with the properties of each elements and of the report iself:
+- delete bands if unnecessary and also blank spaces in them because will be replicated also in the generated file;
+- change and beautify styles (borders, text styles, alignment, etc.) usign the appropriate "Properties" tab;
+- remove pagination because is provided by default, so go to `Outline > Click on report name > Properties > Advanced > Pagination` and set "Ignore Pagination" to `true`;
+- if you need to "freeze" rows or columns do `Click on report name > Properties > Advanced > Misc > Edit Properties > Add` and serch for something like **net.sf.jasperreports.export.xls.freeze.row** (or **\[...\].column**) and add a number value for row and a letter value for column;
+> Example of jrxml outuput file to freeze until to "D" column and to second row":
+```xml
+	<property name="net.sf.jasperreports.export.xls.freeze.row" value="3"/>
+	<property name="net.sf.jasperreports.export.xls.freeze.column" value="E"/>
+```
+- use Jasper functionalities to make operation like sum, average, etc.;
+- integrate subreports into a main report (or maybe wait for the next article about Jasper).
 
-To remove a band, right-click on it and select "Delete", so do it for all except for "Title", "Column Header" and "Detail 1".
-Add a title drag-and-drop a "Text Field" from the "Palette" view to the "Title" band, set size as you want and write into it something you want.
-
-> If you keep blank spaces in your bands them will be replicated also in the generated file, so reduce them to their content double-clicking on them.
-
-To change text style select an element - or a group of elements - and let's see its properties on the "Properties" view on the bottom-right corner. The tab of this property has the same of the element type (e.g. *Static text*).
-
-If you has generated the report yet you have been noticed that there was a pagination inside of it: happens because Jasper Reports use pagination as default, so disable it `Outline > Click on report name > Properties > Advanced > Pagination` and set "Ignore Pagination" to `true`.
+## Example
+The following link points to the report of the example, so [download it](http://s000.tinyupload.com/?file_id=00121768208436037704) and enjoy.

@@ -36,7 +36,7 @@ customize:
     highlight: rainbow
 
 # RSS
-rss: false
+rss:
 
 # Plugins
 plugins:

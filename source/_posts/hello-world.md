@@ -42,3 +42,4 @@ hexo server
 
 Now if you visit *http://localhost:4000/* you can see a running Hexo blog.
 If you want to know more things about Hexo visit its [documentation page](https://hexo.io/docs/).
+<br><br>Bye.

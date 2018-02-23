@@ -53,5 +53,4 @@ Coz I wanna to write here what I daily learn, concerning programming or whatever
 Remember:
 > Verba volant, scripta manent.
 
-<br/>
-Bye.
+<br><br>Bye.

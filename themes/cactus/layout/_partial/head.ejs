@@ -3,13 +3,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
+    <meta name="google-site-verification" content="oFtQZDKqrWFiJd3T9f4lye6gX_aUXDO4GTtkSfrRqgg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <%- open_graph({
         image:          thumbnail(page),
         fb_app_id:      theme.open_graph.fb_app_id,
         fb_admins:      theme.open_graph.fb_admins,
         twitter_id:     theme.open_graph.twitter_id,
-        google_plus:    theme.open_graph.google_plus,
+        google_plus:    theme.open_graph.google_plus
     }) %>
     <%- meta(page) %>
     <% if (theme.favicon) { %>

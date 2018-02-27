@@ -25,9 +25,9 @@ Hard skills:
 - Docker / Vagrant
 - Apache / Nginx
 - Git / Subversion
-- MySQL / PostgreSQL / MongoDB / Redis
+- MySQL / PostgreSQL / MongoDB
 - Drupal / Wordpress
-- Laravel
+- Laravel / Lumen
 - DDD
 - Composer / Packagist / npm / Yarn / Bower
 - Hexo / VueJS / React / CreateJS

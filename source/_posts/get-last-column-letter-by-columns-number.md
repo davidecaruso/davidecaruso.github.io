@@ -4,7 +4,9 @@ tags:
   - php
   - excel-reports
   - snippet
+date: 2018-03-02 17:55:14
 ---
+
 
 **Scenario**: I have raw data to write in an Excel report and I need to know which will be the last column.
 

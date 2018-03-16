@@ -96,6 +96,6 @@ sitemap:
 # Robots
 robotstxt:
   useragent: "*"
-  disallow:
+  disallow: ""
   allow:
-  sitemap: /sitemap.xml
+  sitemap: https://davidecaruso.github.io/sitemap.xml

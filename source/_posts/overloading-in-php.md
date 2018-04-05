@@ -8,7 +8,7 @@ date: 2018-02-20 13:10:42
 
 
 ## Definition
-One of the most appreciable things of the <abbr title="Object Oriented Programming">OOP</abbr> is the *overloading*, a technique which provides the possibility to declare many methods - or properties as well - with different functionalities but with the same name. The only things in which they differ are the type and/or the number of the arguments passed to, and is thanks to them that you can choose which implementation to call.
+One of the most appreciable things of the <abbr title="Object Oriented Programming">OOP</abbr> is the *overloading*, a technique which provides the possibility to declare many methods – or properties as well – with different functionalities but with the same name. The only things in which they differ are the type and/or the number of the arguments passed to, and is thanks to them that you can choose which implementation to call.
 
 As the other programming languages, also PHP provides this functionality but is a bit different: you can dynamically create methods and properties without declare them explicitily, but you cannot declare of them with the same name, almost the opposite of the traditional.
 
@@ -74,7 +74,7 @@ echo $librarian->getBookTitle(); // prints 'Foo'
 echo $librarian->getBookPublishDate(); // throws an exception
 ```
 
-The *method overloading* is provided by the **__call** magic method of the *Librarian* class: inside it a regular-expression-match allows to trigger methods of which name starts with **getBook** followed by the name of the property you are asking for; before to return the book property we make sure that the given is one of the availables - only public properties in this case, title and author - and then return it.
+The *method overloading* is provided by the **__call** magic method of the *Librarian* class: inside it a regular-expression-match allows to trigger methods of which name starts with **getBook** followed by the name of the property you are asking for; before to return the book property we make sure that the given is one of the availables – only public properties in this case, title and author – and then return it.
 
 Both two solution work fine but ask to yourself what could happen if book properties change, increase or decrease: you will need to declare new methods, maybe you have to delete some one else or moreover change already existing ones each time your needs change, annoying stuff in short.
  

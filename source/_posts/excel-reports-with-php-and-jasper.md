@@ -14,7 +14,7 @@ Not properly true: PHPExcel is a great library which saved all of us many times 
 
 ## Jasper Studio
 Jasper Studio is a cross-platform software written in Java which allows to create, view and manipulate reports in many formats, providing the possibility to connect them to different kinds of data sources (databases, JSON, webservices, csv, etc.).
-It was born on 2001 and its the perfect software for who daily deals with reporting because allows the full management of reports directly from user-interface, including to edit styles, positions and properties of each elements without write a line of code - in most cases. 
+It was born on 2001 and its the perfect software for who daily deals with reporting because allows the full management of reports directly from user-interface, including to edit styles, positions and properties of each elements without write a line of code – in most cases.
 
 Probably you're asking in your mind «Well, but why you are talking about this software?» and the answer is that Jasper is the alternative solution.
 
@@ -33,7 +33,7 @@ Now is time to put into practice all of this.
 ### Create a Jasper Report
 First of all you need to install JasperStudio on your computer, [here](https://community.jaspersoft.com/project/jaspersoft-studio/releases) you can choose which version and for which OS to install.
 
-Open it and create a new report `File > New > Jasper Report` and choose a template - for this example I have used "Blank A4 Landascape" - and choose "One Empty Record" as *Data Adapter*. 
+Open it and create a new report `File > New > Jasper Report` and choose a template – for this example I have used "Blank A4 Landascape" – and choose "One Empty Record" as *Data Adapter*.
 
 **Congratulation!** your empty report was created. Well, go straight to the point.
 Probably you are seeing something like that (if not maybe because I'm using the dark theme :sunglasses:):

@@ -1,10 +1,12 @@
 ---
 title: 'Laravel: how to quickly create dynamic routes'
 tags:
- - laravel
- - php
- - routing
+  - laravel
+  - php
+  - routing
+date: 2018-04-05 11:13:26
 ---
+
 Laravel allows to easily integrate dynamic routes with controllers and the related *Eloquent* models, without caring about how to get data from database. That is provided by a strict relation between the controller and the model, by using the *type hinting* inside the controller's method and implementing a method of the model to set which is the relation.
 
 ## Put in practice

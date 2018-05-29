@@ -7,6 +7,8 @@
 # page within your website.
 projects_url: https://github.com/davidecaruso
 
+# Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
+direction: ltr
 # Configure the navigation menu.
 # A pair 'Key: url' will result in a link to 'url' with the name 'Key' in the
 # navigation menu. Optionally, you can add translations for the 'Key' in
@@ -23,7 +25,8 @@ nav:
 # only 'mail' is an exception.
 social_links:
   github: https://github.com/davidecaruso
-  linkedin: https://www.linkedin.com/in/davidecaruso93/
+  linkedin: https://www.linkedin.com/in/davidecaruso93
+  aboutme: https://about.me/davidecaruso
   stack-overflow: https://stackoverflow.com/users/3612464/davide-caruso?tab=profile
   twitter: https://twitter.com/davidecaruso93
   facebook: https://www.facebook.com/davide.caruso93
@@ -118,6 +121,11 @@ disqus:
 google_analytics: 
   enabled: true
   id: UA-108263871-2
+
+# Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
+baidu_analytics:
+  enabled: false
+  id: 2e6da3c375c8a87f5b664cea6d4cb29c
 
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.

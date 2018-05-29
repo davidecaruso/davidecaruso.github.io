@@ -1,10 +1,12 @@
 ---
 title: Dependency Injection vs Dependency Inversion
 tags:
- - solid principles
- - design patterns
- - oop
+  - solid principles
+  - design patterns
+  - oop
+date: 2018-05-29 13:59:39
 ---
+
 
 The *Dependency Injection* and the *Dependency Inversion* are concepts closely related and often confused with each other – maybe for their similar names – but are different. 
 

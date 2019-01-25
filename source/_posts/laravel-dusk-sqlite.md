@@ -1,16 +1,18 @@
 ---
 title: Testing Laravel with Dusk and SQLite
-tags: 
+tags:
   - laravel
   - dusk
   - testing
   - sqlite
+date: 2019-01-25 15:14:10
 ---
 
-[Laravel Dusk](https://laravel.com/docs/5.7/dusk) is a helpful tool to perform browser-automated testing using a standalone ChromeDriver installation. In order to do tests in a different environment – therefore a different database –we have to set a bunch of configs. Even if Dusk is ready-to-use after the installation, config it to point to a SQLite database could be very tricky, and is also hard to find documentation about it.
+
+[Laravel Dusk](https://laravel.com/docs/5.7/dusk) is a helpful tool to perform browser-automated tests using a standalone ChromeDriver installation. In order to use a different environment – therefore a different database – we have to set a bunch of configs. Even if Dusk is ready-to-use after the installation, using it with a SQLite database could be very tricky, and is also hard to find documentation about it.
 
 ## Create a brand new database connection
-The first thing you have to do is create a new custom database connection in the **config/database.php** file – you can also use the existing *sqlite* connection:
+The first thing you have to do is create a new database connection in the **config/database.php** file – you can also use the existing *sqlite* connection:
 
 ```php
 <?php
@@ -30,10 +32,10 @@ return [
 ];
 ```
 
-This configuration will create a database named **database.sqlite** inside the *database* folder.
+This configuration will create a database file named **database.sqlite** inside the *database* folder.
 
 ## Setting up the environment
-The next step is to create a copy of the **.env** file naming it **.env.dusk**<sup>1</sup>, leaving everything as is but changing only the database variables:
+The next step is to create a copy of the **.env** file named **.env.dusk**<sup>1</sup>, leaving everything as is but changing only few variables:
 ```dotenv
 # ...
 APP_ENV=testing
@@ -53,7 +55,7 @@ Comment or delete all **DB_&#42;** variables, set the **DB_CONNECTION** to *dusk
 
 ## Run Dusk tests
 Be loaded, we are finishing. 
-Lastly, we have to clear previous config and serve the project with the right environment:
+Lastly, we have to clear previous config and serve the project using the correct environment:
 ```bash
 php artisan config:clear
 php artisan serve --env=dusk
@@ -64,6 +66,6 @@ Now we can run Dusk tests as we commonly do:
 php artisan dusk
 ```
 
-And should be work :tada:
+And should work :tada:
 
 <br><br>Bye.

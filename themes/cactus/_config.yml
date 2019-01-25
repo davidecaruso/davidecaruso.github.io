@@ -20,7 +20,7 @@ nav:
   projects: https://github.com/davidecaruso
 
 # Links to your social media accounts.
-# The keys should correspond to Fontawesome icon names 
+# The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
@@ -31,15 +31,31 @@ social_links:
   facebook: https://www.facebook.com/davide.caruso93
   mail: mailto:davide.caruso93@gmail.com
 
+# Customize the overview with displaying a tagcloud on the index page.
+# Options: https://hexo.io/docs/helpers.html#tagcloud
+tags_overview: false
 
 # Customize the overview with the most recent blog posts on the index page.
 # Options:
 #   - show_all_posts: whether to show all available posts.
 #   - post_count: whether to show only the x most recent posts.
+#   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
   post_count: 5
+  sort_updated: false
 
+# Customize the archive view.
+# Options:
+#   - sort_updated: sort posts by last modification date instead of creation date.
+archive:
+  sort_updated: false
+
+# Customize the article view.
+# Options:
+#   - show_updated: show the last modification date.
+post:
+  show_updated: false
 
 ##############################################################################
 # Look and Feel
@@ -68,7 +84,7 @@ logo:
 # Options:
 #   - url: where the icon can be found
 #   - gravatar: whether to create a favicon from your Gravatar
-favicon: 
+favicon:
   desktop:
     url: /favicon.ico
     gravatar: true
@@ -97,10 +113,10 @@ page_width: 48
 ##############################################################################
 
 # Enable or disable the RSS feed.
-rss:
+rss: false
 
 # Turn your web pages into graph objects (see http://ogp.me).
-open_graph: 
+open_graph:
   fb_app_id:
   fb_admins:
   twitter_id: 719470803411185664

@@ -2,6 +2,8 @@ nav:
   home: Home
   about: About
   articles: Archive
+  tag: Tag
+  category: Category
   projects: Projects
   search: Search
 
@@ -12,8 +14,10 @@ index:
   find_me_on: Find me on
   enum_comma: ','
   enum_and: and
-  articles: Archive
+  articles: Writing
   projects: Projects
+  topics: Topics
+  most_recent: Most recent
 
 post:
   desktop:
@@ -31,8 +35,27 @@ search:
   search: Search...
   no_results: No results found.
 
+tag_cloud:
+  zero: No tags
+
 pagination:
   page: Page %d of %d
+
+counter:
+  tag_cloud:
+    zero: No tags
+    one: ""
+    other: ""
+
+  categories:
+    zero: No categories
+    one: ""
+    other: ""
+
+  archive_posts:
+    zero: No posts.
+    one: ""
+    other: ""
 
 comments:
   no_js: Please enable JavaScript to view the comments.

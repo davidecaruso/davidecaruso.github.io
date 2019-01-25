@@ -1,5 +1,5 @@
 ---
-title: d10o->about()
+title: About
 date: 2018-02-09 10:40:20
 ---
 
@@ -17,32 +17,30 @@ Soft skills:
 - Continuous improvements \(behavioral\).
 - Perfection tendency \(ill\).
 - Synthesis \(extreme\).
-- Focus on objectives \(rational\).
+- Focus on goals \(rational\).
 - Clean code ambassador \(pedantic\).
 
 Hard skills:
 - Unix-like OS / Windows \(unfortunately\)
 - Docker / Vagrant
-- Apache / Nginx
-- Git / Subversion
+- Apache / nginx
+- Git / Git flow / Semantic Versioning
 - MySQL / PostgreSQL / MongoDB
 - Drupal / Wordpress
-- Laravel / Lumen
-- DDD
+- Laravel / Lumen / Slim
+- DDD / Clean Architecture
 - Composer / Packagist / npm / Yarn / Bower
-- Hexo / VueJS / React / CreateJS
+- Vue.js / NativeScript / Hexo / CreateJS
 - Webpack / Grunt / Gulp
 - Unit, Functional & Acceptance Testing
-- PHP
-- JavaScript (ES2015) / NodeJS
-- Shell scripting
+- PHP / TypeSript / JavaScript (ESNext) / Node.js / Go / Shell
 - CSS / Sass / Less
-- HTML5 / AMP
+- HTML5 / AMP / SPA / PWA
  
 ## How
-I'm on Ubuntu (work) and macOS (home) :computer:
-I use *tmux* with *Fish* shell :zap:
-I write code using PHPStorm :heart:
+I'm on Mac :computer:
+I use *iTerm* with *fish* shell :zap:
+I write code using IntelliJ :heart:
 I listen music on Spotify :musical_note:
  
 ## Where

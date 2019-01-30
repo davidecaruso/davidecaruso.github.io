@@ -32,7 +32,11 @@ return [
 ];
 ```
 
-This configuration will create a database file named **database.sqlite** inside the *database* folder.
+This configuration will use a database file named **database.sqlite** inside the *database* folder. If something doesn't work, create the file manually:
+
+```bash
+touch database/database.sqlite
+```
 
 ## Setting up the environment
 The next step is to create a copy of the **.env** file named **.env.dusk**<sup>1</sup>, leaving everything as is but changing only few variables:
@@ -51,7 +55,7 @@ DB_CONNECTION=dusk
 ```
 Comment or delete all **DB_&#42;** variables, set the **DB_CONNECTION** to *dusk* and make sure that the **APP_ENV** is *testing*.
 
-> 1\. On the web you may find **.env.dusk.testing** or **.env.dusk.local** but seem that don't work.
+> 1\. On the web you may find **.env.dusk.testing** or **.env.dusk.local** doesn't seem to be working.
 
 ## Run Dusk tests
 Be loaded, we are finishing. 

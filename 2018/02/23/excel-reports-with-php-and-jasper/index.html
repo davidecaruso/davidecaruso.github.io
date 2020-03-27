@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><link rel=manifest href=/manifest.json>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="At least one time in the life of a developer has been happened the need to create an Excel file with data, maybe coming from database, external services or something else. For this reason all PHP deve">
+<meta name="keywords" content="php,excel-reports,jaspert-reports">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel reports with PHP and Jasper">
+<meta property="og:url" content="https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/index.html">
+<meta property="og:site_name" content="Davide Caruso">
+<meta property="og:description" content="At least one time in the life of a developer has been happened the need to create an Excel file with data, maybe coming from database, external services or something else. For this reason all PHP deve">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f644.png?v7">
+<meta property="og:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7">
+<meta property="og:image" content="https://davidecaruso.github.io/images/2018-02-22-jasper-studio-1.png">
+<meta property="og:image" content="https://davidecaruso.github.io/images/2018-02-22-jasper-studio-2.png">
+<meta property="og:updated_time" content="2020-03-26T18:41:38.635Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Excel reports with PHP and Jasper">
+<meta name="twitter:description" content="At least one time in the life of a developer has been happened the need to create an Excel file with data, maybe coming from database, external services or something else. For this reason all PHP deve">
+<meta name="twitter:image" content="https://assets-cdn.github.com/images/icons/emoji/unicode/1f644.png?v7">
+<meta name="twitter:creator" content="@719470803411185700">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/37274feabca768f0ab718bfe1bbea7a2?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/37274feabca768f0ab718bfe1bbea7a2?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/37274feabca768f0ab718bfe1bbea7a2?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Excel reports with PHP and Jasper</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archive</a></li>
+         
+          <li><a href="https://github.com/davidecaruso">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/03/02/get-last-column-letter-by-columns-number/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2018/02/20/overloading-in-php/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&text=Excel reports with PHP and Jasper"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&is_video=false&description=Excel reports with PHP and Jasper"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Excel reports with PHP and Jasper&body=Check out this article: https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&name=Excel reports with PHP and Jasper&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Jasper-Studio"><span class="toc-number">1.</span> <span class="toc-text">Jasper Studio</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP-amp-Jasper"><span class="toc-number">2.</span> <span class="toc-text">PHP &amp; Jasper</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Let’s-do-a-report"><span class="toc-number">3.</span> <span class="toc-text">Let’s do a report</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-Jasper-Report"><span class="toc-number">3.1.</span> <span class="toc-text">Create a Jasper Report</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set-JSON-as-Jasper-data-source"><span class="toc-number">3.2.</span> <span class="toc-text">Set JSON as Jasper data source</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-Jasper-report-using-PHP"><span class="toc-number">3.3.</span> <span class="toc-text">Generate Jasper report using PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips-to-make-a-better-Jasper-Report"><span class="toc-number">3.4.</span> <span class="toc-text">Tips to make a better Jasper Report</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">4.</span> <span class="toc-text">Example</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Excel reports with PHP and Jasper
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Davide Caruso</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2018-02-23T10:55:20.000Z" itemprop="datePublished">2018-02-23</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/excel-reports/">excel-reports</a>, <a class="tag-link" href="/tags/jaspert-reports/">jaspert-reports</a>, <a class="tag-link" href="/tags/php/">php</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>At least one time in the life of a developer has been happened the need to create an Excel file with data, maybe coming from database, external services or something else. For this reason all PHP developers certainly know <a href="https://github.com/PHPOffice/PHPExcel" target="_blank" rel="noopener">PHPExcel</a>, or its successor <a href="https://github.com/PHPOffice/PhpSpreadsheet" target="_blank" rel="noopener">PhpSpreadsheet</a>, and each one of them doesn’t wanna deal with it, unless necessary.</p>
+<p>Not properly true: PHPExcel is a great library which saved all of us many times while programming, but often we don’t know which alternatives exist or maybe the report we have to generate is too complex and also its development with PHPExcel.</p>
+<h2 id="Jasper-Studio"><a href="#Jasper-Studio" class="headerlink" title="Jasper Studio"></a>Jasper Studio</h2><p>Jasper Studio is a cross-platform software written in Java which allows to create, view and manipulate reports in many formats, providing the possibility to connect them to different kinds of data sources (databases, JSON, webservices, csv, etc.).<br>It was born on 2001 and its the perfect software for who daily deals with reporting because allows the full management of reports directly from user-interface, including to edit styles, positions and properties of each elements without write a line of code – in most cases.</p>
+<p>Probably you’re asking in your mind «Well, but why you are talking about this software?» and the answer is that Jasper is the alternative solution.</p>
+<h2 id="PHP-amp-Jasper"><a href="#PHP-amp-Jasper" class="headerlink" title="PHP &amp; Jasper"></a>PHP &amp; Jasper</h2><p>On 2012 was created a project called <a href="http://jasperstarter.cenote.de/" target="_blank" rel="noopener">JasperStarter</a>, a library which allows the use command line to compile and generate Jasper reports. Awesome! Isn’t it?</p>
+<p>Well, but another step is missing.</p>
+<p>On 2018 a good guy (<img class="github-emoji" style="display:inline" title="roll_eyes" alt="roll_eyes" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f644.png?v7" height="20" width="20">) has published a PHP package to integrate the JasperStarter library with PHP: <strong>drum roll</strong> and welcome to <a href="https://github.com/davidecaruso/jasper-php" target="_blank" rel="noopener">JasperPHP</a>.</p>
+<blockquote>
+<p>Note: there are many library like this existing from more time, but I prefered to create my own.</p>
+</blockquote>
+<h2 id="Let’s-do-a-report"><a href="#Let’s-do-a-report" class="headerlink" title="Let’s do a report"></a>Let’s do a report</h2><p>Now is time to put into practice all of this.</p>
+<h3 id="Create-a-Jasper-Report"><a href="#Create-a-Jasper-Report" class="headerlink" title="Create a Jasper Report"></a>Create a Jasper Report</h3><p>First of all you need to install JasperStudio on your computer, <a href="https://community.jaspersoft.com/project/jaspersoft-studio/releases" target="_blank" rel="noopener">here</a> you can choose which version and for which OS to install.</p>
+<p>Open it and create a new report <code>File &gt; New &gt; Jasper Report</code> and choose a template – for this example I have used “Blank A4 Landascape” – and choose “One Empty Record” as <em>Data Adapter</em>.</p>
+<p><strong>Congratulation!</strong> your empty report was created. Well, go straight to the point.<br>Probably you are seeing something like that (if not maybe because I’m using the dark theme <img class="github-emoji" style="display:inline" title="sunglasses" alt="sunglasses" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v7" height="20" width="20">):</p>
+<p><img src="/images/2018-02-22-jasper-studio-1.png" alt="Jasper Studio #1" title="Jasper Studio #1"></p>
+<blockquote>
+<p>Jasper works with <em>.jrxml</em> source files and <em>.jasper</em> compiled files, be prepared to put hands into source files.</p>
+</blockquote>
+<h3 id="Set-JSON-as-Jasper-data-source"><a href="#Set-JSON-as-Jasper-data-source" class="headerlink" title="Set JSON as Jasper data source"></a>Set JSON as Jasper data source</h3><p>As said, we could have many type of data source, but for this <em>minimalistic</em> example we are going to use the following as source:<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">"Clean Code: A Handbook of Agile Software Craftsmanship"</span>,</span><br><span class="line">      <span class="attr">"authors"</span>: <span class="string">"Robert C. Martin"</span>,</span><br><span class="line">      <span class="attr">"year"</span>: <span class="string">"2008"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">"Design Patterns"</span>,</span><br><span class="line">      <span class="attr">"authors"</span>: <span class="string">"Erich Gamma, John Vlissides, Ralph Johnson, Richard Helm"</span>,</span><br><span class="line">      <span class="attr">"year"</span>: <span class="string">"1994"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">"The Mythical Man-Month"</span>,</span><br><span class="line">      <span class="attr">"authors"</span>: <span class="string">"Fred Brooks"</span>,</span><br><span class="line">      <span class="attr">"year"</span>: <span class="string">"1975"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">"The Pragmatic Programmer"</span>,</span><br><span class="line">      <span class="attr">"authors"</span>: <span class="string">"Andy Hunt"</span>,</span><br><span class="line">      <span class="attr">"year"</span>: <span class="string">"1999"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>So create a data source <code>File &gt; New &gt; Data Adapter</code>, choose “JSON File” and insert the path to your file.</p>
+<p>On the “Outline” view, on the bottom-left corner, right-click on report name and go to “Dataset and Query Dialog”. Here by the dropdown menu select the earlier created data source, recommending to select “JSON” as language and, if works, you will see the list of fields under <em>data</em>. You can interact with them right-clicking on them, so set <em>data</em> as record node and the others as field. The result has to be like this:</p>
+<p><img src="/images/2018-02-22-jasper-studio-2.png" alt="Jasper Studio #2" title="Jasper Studio #2"></p>
+<p>In this way, on the “Outline” view again, you will see the fields. Simply drag-and-drop them into “Detail 1” band and will be created field instances and their relative labels.</p>
+<p>Done, the report is ready to be generated via PHP.</p>
+<h3 id="Generate-Jasper-report-using-PHP"><a href="#Generate-Jasper-report-using-PHP" class="headerlink" title="Generate Jasper report using PHP"></a>Generate Jasper report using PHP</h3><p>Into an existing or an empty project, run <code>composer require davidecaruso/jasper-php</code>, then move all essential files into your project (<em>jrxml</em> and JSON file). Then, your script will be like this:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require_once</span> <span class="string">'/vendor/autoload.php'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Create a new instance of JasperPHP</span></span><br><span class="line">$jasper = <span class="keyword">new</span> JasperPHP\JasperPHP();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Compile jrxml file into jasper</span></span><br><span class="line">$jasper-&gt;compile(<span class="string">'/path/to/report.jrxml'</span>)-&gt;execute();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Generate the report</span></span><br><span class="line">$jasper-&gt;process(</span><br><span class="line">    <span class="string">'/path/to/report.jasper'</span>,</span><br><span class="line">    <span class="keyword">null</span>,</span><br><span class="line">    [<span class="string">'xlsx'</span>],</span><br><span class="line">    [],</span><br><span class="line">    [</span><br><span class="line">        <span class="string">'driver'</span> =&gt; <span class="string">'json'</span>,</span><br><span class="line">        <span class="string">'json_query'</span> =&gt; <span class="string">'data'</span>, <span class="comment">// The data is under the JSON "data" layer</span></span><br><span class="line">        <span class="string">'data_file'</span> =&gt; <span class="string">'/path/to/data.json'</span></span><br><span class="line">    ]</span><br><span class="line">)-&gt;execute();</span><br></pre></td></tr></table></figure>
+<p>Yes, it worked, but the Excel file is orrible.</p>
+<h3 id="Tips-to-make-a-better-Jasper-Report"><a href="#Tips-to-make-a-better-Jasper-Report" class="headerlink" title="Tips to make a better Jasper Report"></a>Tips to make a better Jasper Report</h3><p>You can play with the properties of each elements and of the report itself:</p>
+<ul>
+<li>delete bands if unnecessary and also blank spaces in them because will be replicated also in the generated file;</li>
+<li>change and beautify styles (borders, text styles, alignment, etc.) using the appropriate “Properties” tab;</li>
+<li>remove pagination because is provided as default, so go to <code>Outline &gt; Click on report name &gt; Properties &gt; Advanced &gt; Pagination</code> and set “Ignore Pagination” to <code>true</code>;</li>
+<li><p>if you need to “freeze” rows or columns do <code>Click on report name &gt; Properties &gt; Advanced &gt; Misc &gt; Edit Properties &gt; Add</code> and search for something like <strong>net.sf.jasperreports.export.xls.freeze.row</strong> (or <strong>*.column</strong>) and add a number value for row and a letter for column;</p>
+<blockquote>
+<p>Example of jrxml output file to freeze until to “D” column and to second row”:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"net.sf.jasperreports.export.xls.freeze.row"</span> <span class="attr">value</span>=<span class="string">"3"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"net.sf.jasperreports.export.xls.freeze.column"</span> <span class="attr">value</span>=<span class="string">"E"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>use Jasper functionalities to perform operations like sum, average, etc.;</p>
+</li>
+<li>instead of use a JSON file you could pass to Jasper a json-encoded array, maybe with data coming from a database or use a direct connection to it;</li>
+<li>integrate subreports into a main report (or maybe wait for the next article).</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>The following link points to the report of the example, so <a href="http://s000.tinyupload.com/?file_id=94589912227645439654" target="_blank" rel="noopener">download it</a> and generate it.</p>
+<p><br><br>Bye.</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archive</a></li>
+         
+          <li><a href="https://github.com/davidecaruso">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Jasper-Studio"><span class="toc-number">1.</span> <span class="toc-text">Jasper Studio</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP-amp-Jasper"><span class="toc-number">2.</span> <span class="toc-text">PHP &amp; Jasper</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Let’s-do-a-report"><span class="toc-number">3.</span> <span class="toc-text">Let’s do a report</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-Jasper-Report"><span class="toc-number">3.1.</span> <span class="toc-text">Create a Jasper Report</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set-JSON-as-Jasper-data-source"><span class="toc-number">3.2.</span> <span class="toc-text">Set JSON as Jasper data source</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-Jasper-report-using-PHP"><span class="toc-number">3.3.</span> <span class="toc-text">Generate Jasper report using PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips-to-make-a-better-Jasper-Report"><span class="toc-number">3.4.</span> <span class="toc-text">Tips to make a better Jasper Report</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">4.</span> <span class="toc-text">Example</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&text=Excel reports with PHP and Jasper"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&is_video=false&description=Excel reports with PHP and Jasper"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Excel reports with PHP and Jasper&body=Check out this article: https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&title=Excel reports with PHP and Jasper"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://davidecaruso.github.io/2018/02/23/excel-reports-with-php-and-jasper/&name=Excel reports with PHP and Jasper&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Davide Caruso
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Archive</a></li>
+         
+          <li><a href="https://github.com/davidecaruso">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-108263871-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'd10o';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1585298691343')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>

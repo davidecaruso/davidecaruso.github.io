@@ -83,10 +83,7 @@ deploy:
 githubEmojis:
   enable: true
   className: github-emoji
-  unicode: false
-  styles:
-    display: inline
-  localEmojis:
+  inject: true
 
 # Sitemap
 sitemap:

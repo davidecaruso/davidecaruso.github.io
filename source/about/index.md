@@ -36,16 +36,16 @@ Hard skills:
 - HTML5 / AMP / SPA / PWA
  
 ## How
-I'm on Debian :computer:
-I use *tmux* with *fish* shell :zap:
-I write code using IntelliJ :heart:
-I listen music on Spotify :musical_note:
+I'm on Debian and macOS
+I use *tmux* with *fish* shell
+I write code using IntelliJ
  
 ## Where
 I live in Palermo, a beautiful city of the Sicily, Italy - but probably you have seen me around the world.
  
 ## Why
 Coz I wanna to write here what I daily learn, concerning programming or whatever.
+
 Remember:
 > Verba volant, scripta manent.
 
